@@ -1,10 +1,11 @@
-# realizzare un sito web che attraverso l'utilizzo di jas calcoli l'indice di massa corporea. 
-#il sito deve essere in italòiano e in inglese. 
+# realizzare un sito web che attraverso l'utilizzo di js calcoli l'indice di massa corporea. 
+#il sito deve essere in italiano e in inglese. 
 #l'utente inserisce peso e altezza e il programma risponde con il calcolo dell'imc, un responso ( sottopeso, normopeso, sovrappeso) e un immagine adatta
 from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route('/')
+@app.route('/it')
 def homepage():
     return render_template("homepageimc.html")
 
