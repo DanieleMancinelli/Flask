@@ -9,16 +9,19 @@ function calcolaIMC() {
     let immagine;
     if (IMC < 18.5) {
         classificazione = "sottopeso";
-        immagine = 'images/fiorentina.jpg';
+        immagine = 'static/images/fiorentina.jpg';
     } else if (IMC < 24.9) {
         classificazione = "normopeso";
+        immagine = 'static/images/pasta_pomodoro.jpg';
     } else if (IMC < 29.9) {
         classificazione = "sovrappeso";
+        immagine = 'static/images/insalata.jpg';
     } else {
         classificazione = "obeso";
+        immagine = 'static/images/palestra.jpg';
     }
 
-    document.getElementById("immagine").src = immagine;
+     document.getElementById("immagine").src = immagine;
 
     const output = "Il tuo IMC è " + IMCarrotondato + ", e sei " + classificazione;
     document.getElementById("risultato").innerHTML = output;
